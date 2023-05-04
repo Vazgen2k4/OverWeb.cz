@@ -1,0 +1,13 @@
+@mixin font($name, $weight, $weightValue, $pathToFolder: './../fonts/') {
+    $path: $pathToFolder + $name + '-'+ $weight;
+    @font-face {
+        font-family: $name;
+        src: url($path + '.ttf') format('truetype');
+        font-weight: $weightValue;
+        font-style: normal;
+    }
+}
+@include font('Roboto', 'Black', 900);
+@include font('Roboto', 'Bold', 700);
+@include font('Roboto', 'Regular', 400);
+@include font('Roboto', 'Light', 300);
