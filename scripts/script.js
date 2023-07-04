@@ -1,10 +1,11 @@
+const mobileWidth = 991;
+
 let allBtns = [...document.querySelectorAll('.btn')];
 
 allBtns.forEach((button, index) => {
     let square = document.createElement('div');
     square.classList.add('square');
     button.append(square);
-
 
     let animation = [{
         right: "-10%",
@@ -61,7 +62,9 @@ function setFooter() {
     for (let index = 0; index < itemCount; index++) {
         let footerGridItem = document.createElement('div');
         footerGridItem.classList.add('footer__grid-item');
+
         let footerGridSpan = document.createElement('span');
+
         footerGridItem.appendChild(footerGridSpan);
         footerGrid.appendChild(footerGridItem);
     }
@@ -102,4 +105,65 @@ function setFooter() {
         });
     });
 
+}
+
+let sites = [...document.querySelectorAll('.portfolio__card-content')];
+
+sites.forEach(mouseOnSite);
+
+function mouseOnSite(site, index) {
+    let delay = (index * 300) + 'ms';
+    let wowDurationAnimation = 300 + 'ms';
+
+    site.setAttribute('data-wow-delay', delay);
+    site.setAttribute('data-wow-duration', wowDurationAnimation);
+    // site.setAttribute('data-wow-offset', 350);
+
+    let isDevideThree = (index + 1) % 3 === 0;
+    let isEnen = (index + 1) % 2 === 0;
+
+    let animationName = isDevideThree ? 'fadeInRight' : isEnen ? 'fadeInUp' : 'fadeInLeft';
+
+    site.classList.add(animationName);
+
+
+    site.addEventListener('mouseenter', (e) => {
+        sites.forEach((item) => {
+            item.classList.remove('_active');
+        });
+
+        site.classList.add('_active');
+    });
+
+    site.addEventListener('mouseleave', (e) => {
+        site.classList.remove('_active');
+    });
+}
+
+var wow = new WOW({
+    boxClass: '_wow',
+    animateClass: 'animated',
+    mobile: true,
+    live: true,
+});
+wow.init();
+
+
+let soundBtn = document.querySelector('#sound__btn.sound__btn');
+let soundPlayer = document.querySelector('#sound');
+
+soundPlayer.autoplay = true;
+soundPlayer.loop = true;
+soundPlayer.play();
+
+soundBtn.addEventListener('click', switchSound);
+
+
+function switchSound(e) {
+    let isPlayed = soundBtn.classList.contains('_active');
+
+    console.log(isPlayed);
+    isPlayed ? soundPlayer.pause() : soundPlayer.play();
+
+    soundBtn.classList.toggle('_active');
 }
