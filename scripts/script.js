@@ -8,7 +8,7 @@ allBtns.forEach((button, index) => {
     button.append(square);
 
     let animation = [{
-        right: "-10%",
+        right: "-10%", 
         transform: "translateX(100%)",
     }]
 
@@ -117,7 +117,6 @@ function mouseOnSite(site, index) {
 
     site.setAttribute('data-wow-delay', delay);
     site.setAttribute('data-wow-duration', wowDurationAnimation);
-    // site.setAttribute('data-wow-offset', 350);
 
     let isDevideThree = (index + 1) % 3 === 0;
     let isEnen = (index + 1) % 2 === 0;
@@ -154,9 +153,12 @@ let soundPlayer = document.querySelector('#sound');
 
 soundPlayer.autoplay = true;
 soundPlayer.loop = true;
-soundPlayer.play();
+soundPlayer.pause();
 
 soundBtn.addEventListener('click', switchSound);
+addEventListener('keyup', (e) => {
+    e.key.toLocaleLowerCase() === 'm' ? switchSound():0;
+});
 
 
 function switchSound(e) {
