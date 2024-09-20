@@ -31,6 +31,8 @@
     list-style: none;
     font-family: var(--primaryFont);
     color: var(--primaryColor);
+    
+    outline: 5px solid red;
 }
 
 html {
@@ -40,6 +42,8 @@ html {
 
 body {
     background: var(--bgColor);
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 body._no__scroll {
@@ -67,6 +71,7 @@ h6 {
     display: flex;
     align-items: center;
     min-height: 100vh;
+    
 }
 
 .wrapper__content {
