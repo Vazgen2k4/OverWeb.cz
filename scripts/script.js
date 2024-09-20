@@ -1,5 +1,38 @@
 const mobileWidth = 991;
 
+(function setupPortfolio(params) {
+    let portfolioGrid = document.querySelector('.portfolio__grid');
+
+    portfolioList.forEach((itemData) => {
+
+        let porrtfolioCard = document.createElement('div');
+        porrtfolioCard.classList.add('portfolio__card');
+
+        porrtfolioCard.innerHTML = `
+            <div class="portfolio__card-content ">
+                <div class="portfolio__card-body">
+                    <a href="#!" class="portfolio__card-link">
+                        <img class="portfolio__card-img" src="${itemData.img_url}"
+                            alt="${itemData.title}">
+                    </a>
+                    <p class="portfolio__card-descr">${itemData.description}</p> 
+                </div>
+                <a href="${itemData.link}" class="btn">
+                    <span>Перейти</span>
+                </a>
+            </div>
+        `;
+
+        portfolioGrid.appendChild(porrtfolioCard);
+    });
+
+
+    console.log(portfolioGrid);
+})(); 
+
+
+
+
 let allBtns = [...document.querySelectorAll('.btn')];
 
 allBtns.forEach((button, index) => {
@@ -8,7 +41,7 @@ allBtns.forEach((button, index) => {
     button.append(square);
 
     let animation = [{
-        right: "-10%", 
+        right: "-10%",
         transform: "translateX(100%)",
     }]
 
@@ -26,7 +59,6 @@ let menuBtn = document.querySelector('label.bars');
 let navBg = document.querySelector('.nav__content-bg');
 
 let swithBodyScroll = (e) => body.classList.toggle('_no__scroll');
-
 let bodyScrollCorrekting = (e) => innerWidth > 992 ? body.classList.remove('_no__scroll') : 0;
 
 menuBtn.addEventListener('click', swithBodyScroll);
@@ -74,26 +106,26 @@ function setFooter() {
     let footerItems = [...document.querySelectorAll('.footer__grid-item')];
 
     let footerKeyframe = [{
-            transform: 'scale(1)',
-            background: '#fff',
-        },
-        {
-            transform: 'scale(8)',
-            background: '#B88CFF',
-        },
-        {
-            transform: 'scale(6.2)',
-            background: '#A5A6F6',
-        },
-        {
-            transform: 'scale(9.2)',
-            background: ' #9D78D8',
+        transform: 'scale(1)',
+        background: '#fff',
+    },
+    {
+        transform: 'scale(8)',
+        background: '#B88CFF',
+    },
+    {
+        transform: 'scale(6.2)',
+        background: '#A5A6F6',
+    },
+    {
+        transform: 'scale(9.2)',
+        background: ' #9D78D8',
 
-        },
-        {
-            transform: 'scale(1)',
-            background: ' #fff'
-        }
+    },
+    {
+        transform: 'scale(1)',
+        background: ' #fff'
+    }
     ];
 
     footerItems.forEach(item => {
@@ -139,13 +171,8 @@ function mouseOnSite(site, index) {
     });
 }
 
-var wow = new WOW({
-    boxClass: '_wow',
-    animateClass: 'animated',
-    mobile: true,
-    live: true,
-});
-wow.init();
+
+AOS.init();
 
 
 let soundBtn = document.querySelector('#sound__btn.sound__btn');
@@ -157,7 +184,7 @@ soundPlayer.pause();
 
 soundBtn.addEventListener('click', switchSound);
 addEventListener('keyup', (e) => {
-    e.key.toLocaleLowerCase() === 'm' ? switchSound():0;
+    e.key.toLocaleLowerCase() === 'm' ? switchSound() : 0;
 });
 
 
@@ -169,3 +196,6 @@ function switchSound(e) {
 
     soundBtn.classList.toggle('_active');
 }
+
+// create section Portfolio
+

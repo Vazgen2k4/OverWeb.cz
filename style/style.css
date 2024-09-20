@@ -584,11 +584,19 @@ section.section {
     color: var(--buttonHoverColor);
 }
 
-.about__info-descr {
+.about__list {
+    display: flex;
+    flex-direction: column;gap: 16px;
+}
+
+.about__list-item {
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
 }
+
+
+
 
 .about__image-wrapper {
     width: 500px;
