@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title data-lang="portfolio">Портфолио</title>
     <!-- Css - Стили -->
 
     <!-- <link rel="stylesheet" href="./style/animate.css"> -->
@@ -21,6 +21,7 @@
     <!-- Js - скрипты -->
 </head>
 
+
 <body>
 
 
@@ -29,50 +30,81 @@
             Ваш браузер не поддерживает элемент <code>audio</code>.
         </audio>
 
-        <a href="#!" class="sound__btn" id="sound__btn">
-            <svg class="sound__svg" xmlns="http://www.w3.org/2000/svg" height="48" viewbox="0 -960 960 960" width="48">
-                <path class="sound__svg-path"
-                    d="M780-481q0-94-52.5-169T590-759q-12-5-17-16t0-22q5-12 17.5-16.5t25.5.5q101 41 162.5 131T840-481q0 111-61.5 201T616-149q-13 5-25.5.5T573-165q-5-11 0-22t17-16q85-34 137.5-109T780-481ZM280-360H150q-13 0-21.5-8.5T120-390v-180q0-13 8.5-21.5T150-600h130l149-149q14-14 32.5-6.5T480-728v496q0 20-18.5 27.5T429-211L280-360Zm380-120q0 52-26 94t-73 64q-8 4-14.5-1t-6.5-13v-289q0-8 6.5-13t14.5-1q47 22 73 65t26 94ZM420-648 307-540H180v120h127l113 109v-337ZM298-480Z" />
-            </svg>
-        </a>
+
+        <div class="control__buttons">
+            <ul class="langs__list">
+                <li class="langs__list-item">
+                    <a data-lang-btn="ru" href="#!" class="langs__list-btn">
+                        <img src="./images/lang/ru.png" alt="russian">
+                    </a>
+                </li>
+                <li class="langs__list-item">
+                    <a data-lang-btn="cz" href="#!" class="langs__list-btn">
+                        <img src="./images/lang/cz.png" alt="russian">
+                    </a>
+                </li>
+                <li class="langs__list-item">
+                    <a data-lang-btn="en" href="#!" class="langs__list-btn" >
+                        <img src="./images/lang/en.png" alt="russian">
+                    </a>
+                </li>
+            </ul>
+
+
+            <a href="#!" class="sound__btn" id="sound__btn">
+                <svg class="sound__svg" xmlns="http://www.w3.org/2000/svg" height="48" viewbox="0 -960 960 960"
+                    width="48">
+                    <path class="sound__svg-path"
+                        d="M780-481q0-94-52.5-169T590-759q-12-5-17-16t0-22q5-12 17.5-16.5t25.5.5q101 41 162.5 131T840-481q0 111-61.5 201T616-149q-13 5-25.5.5T573-165q-5-11 0-22t17-16q85-34 137.5-109T780-481ZM280-360H150q-13 0-21.5-8.5T120-390v-180q0-13 8.5-21.5T150-600h130l149-149q14-14 32.5-6.5T480-728v496q0 20-18.5 27.5T429-211L280-360Zm380-120q0 52-26 94t-73 64q-8 4-14.5-1t-6.5-13v-289q0-8 6.5-13t14.5-1q47 22 73 65t26 94ZM420-648 307-540H180v120h127l113 109v-337ZM298-480Z" />
+                </svg>
+            </a>
+
+
+        </div>
+
+
 
         <label for="nav-btn" class="bars">
             <span class="burger"></span>
         </label>
-        <nav class="wrapper__nav">
+
+        <nav class="nav">
             <div class="nav__content">
                 <div class="nav__content-bg"></div>
                 <div class="nav__logo">
                     <a href="./index.html" class="logo">
                         <img src="./images/icons/logo.svg" alt="over_web">
                     </a>
-                    <h2 class="nav__logo-title">
+                    <h2 data-lang="title" class="nav__logo-title">
                         Flutter &amp; Web Developer
                     </h2>
                 </div>
                 <ul class="nav__list">
+
                     <li class="nav__list-element">
-                        <a href="#about" class="nav__list-link">
-                            Обо мне
-                        </a>
-                    </li>
-                    <li class="nav__list-element">
-                        <a href="#portfolio" class="nav__list-link">
+                        <a href="#portfolio" data-lang="portfolio" class="nav__list-link">
                             Портфолио
                         </a>
                     </li>
+
                     <li class="nav__list-element">
-                        <a href="#skills" class="nav__list-link">
+                        <a href="#about" data-lang="about_me" class="nav__list-link">
+                            Обо мне
+                        </a>
+                    </li>
+
+                    <li class="nav__list-element">
+                        <a href="#skills" data-lang="skills" class="nav__list-link">
                             Навыки
                         </a>
                     </li>
                     <li class="nav__list-element">
-                        <a href="#footer" class="nav__list-link">
+                        <a href="#footer" data-lang="contact" class="nav__list-link">
                             Контакты
                         </a>
                     </li>
                 </ul>
-                <a href="#!" class="btn">
+                <a href="#!" data-lang="button_order" class="btn">
                     <span>
                         заказать
                     </span>
@@ -102,16 +134,16 @@
             <header class="header">
                 <div class="container">
                     <div class="header__content">
-                        <h1 class="header__title" data-aos="fade-down" data-aos-duration="1500">
+                        <h1 class="header__title" data-lang="title" data-aos="fade-down" data-aos-duration="1500">
                             Flutter &amp; Web Developer
                         </h1>
 
-                        <p class="header__descr">
+                        <p class="header__descr" data-lang="intro_text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </p>
 
                         <a href="#!" class="btn">
-                            <span>
+                            <span data-lang="contact">
                                 Контакты
                             </span>
                         </a>
@@ -129,7 +161,7 @@
                 <section class="section portfolio" id="portfolio">
                     <div class="container">
                         <div class="portfolio__content">
-                            <h2 class="section__title portfolio__title">
+                            <h2 data-lang="portfolio" class="section__title portfolio__title">
                                 Портфолио
                             </h2>
                             <div class="portfolio__grid"></div>
@@ -142,47 +174,39 @@
 
                 <section class="section about" id="about">
                     <div class="container">
-                        <h2 class="section__title about__title">
+                        <h2 class="section__title about__title" data-lang="about_me">
                             Обо мне
                         </h2>
                         <div class="about__content">
                             <div class="about__info">
-                                <h3 class="about__info-title">
+                                <h3 class="about__info-title" data-lang="name">
                                     Арутюнян Вазген Арамович.
                                 </h3>
                                 <ul class="about__info-list about__list">
                                     <li class="about__list-item">
-
-                                        Мой путь в IT начался в 2017 году, когда я впервые окунулся в программирование,
-                                        изучая C++ по рекомендациям "экспертов". С тех пор я активно развиваюсь в
-                                        области
-                                        веб-разработки, освоив такие технологии, как HTML5, CSS3, JavaScript с jQuery,
-                                        Bootstrap 4/5, Node.js, Git, PHP и Vue.js.
+                                        <p data-lang="about_text1">
+                                            Параграф 1
+                                        </p>
                                     </li>
                                     <li class="about__list-item">
-                                        За последние три года я сосредоточился на разработке кроссплатформенных
-                                        приложений с
-                                        использованием Flutter и языка программирования Dart. Это направление позволило
-                                        мне
-                                        создавать эффективные и современные приложения, которые работают на различных
-                                        платформах.
+                                        <p data-lang="about_text2">
+                                            Параграф 2
+                                        </p>
                                     </li>
                                     <li class="about__list-item">
-
-                                        Моя цель — создавать качественные цифровые решения, которые отвечают современным
-                                        требованиям и помогают моим клиентам достигать их целей. С каждым проектом я
-                                        продолжаю расширять свои знания и навыки, оставаясь в авангарде технологий.
+                                        <p data-lang="about_text3">
+                                            Параграф 3
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
+                            <!-- <div class="about__images"> -->
                             <div class="about__images">
-                                <div class="about__image-wrapper">
-                                    <img class="about__img" src="./images/about/about.png"
-                                        alt="about vazgen programmer">
-                                    <img class="about__img" src="./images/about/about_hover.png"
-                                        alt="about vazgen programmer">
-                                </div>
+                                <img class="about__img" src="./images/about/about.png" alt="about vazgen programmer">
+                                <img class="about__img" src="./images/about/about_hover.png"
+                                    alt="about vazgen programmer">
                             </div>
+                            <!-- </div> -->
                         </div>
                         <!-- /.about__content -->
                     </div>
@@ -195,13 +219,13 @@
                         <div class="studio__content">
                             <div class="studio__content-text">
                                 <h2 class="section__title">OverWeb</h2>
-                                <p class="studio__content-deskr">
+                                <p class="studio__content-deskr" data-lang="overweb_description">
                                     Веб студия, основная в начале 22го года.
                                 </p>
                             </div>
 
                             <div class="studio__body">
-                                <h3 class="studio__body-title">
+                                <h3 data-lang="services" class="studio__body-title">
                                     Студия которая может предоставить вам такие услуги как:
                                 </h3>
 
@@ -209,7 +233,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/monitor.png"
                                             alt="monitor komputer">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service1" class="studio__item-descr">
                                             Вёрстка сайта по готовому макету
                                         </p>
                                     </div>
@@ -217,7 +241,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/chain.png"
                                             alt="chain web for key">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service2" class="studio__item-descr">
                                             Сайт под ключ с квалифицированным дизайнером и верстальщиком
                                         </p>
                                     </div>
@@ -225,7 +249,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/layout.png"
                                             alt="layout cms WordPress">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service3" class="studio__item-descr">
                                             Посадка сайта на WordPress.
                                         </p>
                                     </div>
@@ -233,7 +257,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/video.png"
                                             alt="video editing processing">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service4" class="studio__item-descr">
                                             Обработка и монтаж видеороликов
                                             разной степени сложностиу
                                         </p>
@@ -242,7 +266,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/pain.png"
                                             alt="paint design logo posts site aplikation">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service5" class="studio__item-descr">
                                             Разработка индивидуального дизайна: логотипов, постеров, сайтов и приложений
                                         </p>
                                     </div>
@@ -250,7 +274,7 @@
                                     <div class="studio__cards-item studio__item">
                                         <img class="studio__item-img" src="./images/studio/phone.png"
                                             alt="phone android ios web aplikation desktot">
-                                        <p class="studio__item-descr">
+                                        <p data-lang="service6" class="studio__item-descr">
                                             Создание кроссплатформенных приложений для iOS, Android и Web
                                         </p>
                                     </div>
@@ -268,7 +292,7 @@
                 <section class="section skills" id="skills">
                     <div class="container">
                         <div class="skills__content">
-                            <h2 class="section__tilte skills__title">
+                            <h2 data-lang="skills" class="section__tilte skills__title">
                                 Стек знаний
                             </h2>
                             <div class="skills__grid">
@@ -407,17 +431,17 @@
                     <div class="footer__content">
                         <div class="footer__left">
 
-                            <h2 class="section__title footer__title">
+                            <h2 data-lang="contact" class="section__title footer__title">
                                 Связаться со мной
                             </h2>
                             <form method="post" class="footer__form">
-                                <input placeholder="Имя" class="footer__form-input" type="text" name="name" required>
+                                <input placeholder="Name" class="footer__form-input" type="text" name="name" required>
                                 <input placeholder="Email" class="footer__form-input" type="email" name="email"
                                     required>
-                                <textarea required placeholder="Сообщение" class="footer__msg" name="msg"></textarea>
-                                <a href="#!" class="btn footer__form-btn">
-                                    <span>отправить</span>
-                                </a>
+                                <textarea required placeholder="Message" class="footer__msg" name="msg"></textarea>
+                                <button href="#!" class="btn footer__form-btn">
+                                    <span data-lang="form_submit">отправить</span>
+                                </button>
                             </form>
                         </div>
                         <div class="footer__rigth">

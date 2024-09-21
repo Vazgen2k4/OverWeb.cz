@@ -56,3 +56,4 @@ const footerKeyframe = [
  
 const defaultDelay = 300;
 const mobileWidth = 991;
+const html = document.getElementById('html');

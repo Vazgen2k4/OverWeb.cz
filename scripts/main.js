@@ -1,12 +1,22 @@
 addEventListener('DOMContentLoaded', main);
 
 function main(document, event) {
-    setupSound();
+    
+    // setupSound();
+    
+    
+    
+    
     setupNavBar();
     setupPortfolio();
     setupSkills();
     setupFooter();
     setupButtons();
     
-    AOS.init({});
+    AOS.init({
+        duration: 900, 
+    });
+    
+    setupLocalyzation();
+    
 }
