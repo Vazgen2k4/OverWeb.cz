@@ -11,9 +11,8 @@ function setupPortfolio() {
 
         porrtfolioCard.classList.add('portfolio__card');
         porrtfolioCard.setAttribute('data-aos', "zoom-in" + animationName);
-        porrtfolioCard.setAttribute('data-aos-offset', 400);
-        porrtfolioCard.setAttribute('data-aos-delay', defaultDelay);
-
+        porrtfolioCard.setAttribute('data-aos-offset', 500);
+                
         porrtfolioCard.innerHTML = `
             <div class="portfolio__card-content" >
                 <div class="portfolio__card-body">
@@ -40,7 +39,7 @@ function setupPortfolio() {
             sites.forEach((item) => {
                 item.classList.remove('_active');
             });
-
+ 
             site.classList.add('_active');
         });
 
@@ -51,8 +50,10 @@ function setupPortfolio() {
 };
 
 function setupButtons() {
+    
     let allBtns = [...document.querySelectorAll('.btn')];
 
+    
     allBtns.forEach((button, index) => {
         let square = document.createElement('div');
         square.classList.add('square');
@@ -163,7 +164,10 @@ async function setupLocalyzation() {
     let localesList = [...document.querySelectorAll('[data-lang]')];
 
     html.setAttribute('lang', curetntLang);
-
+    
+    let formInputLang = document.querySelector('.footer__form-input[name="lang"]');
+    formInputLang.value = curetntLang;
+    
 
     localesList.forEach((item) => {
         item.textContent = data[item.getAttribute('data-lang')];
@@ -204,9 +208,40 @@ function switchLocale(lang) {
     location.reload();
 }
 
-
 function setupTypingAnimation() {
+    let typingElementsList = [...document.querySelectorAll('[data-tuping-text]')];
+    typingElementsList.forEach(el => {
+        let text = el.textContent;
+        setupTypingAnimationForOne(el, text, 50);
+    });
+}
+
+function setupTypingAnimationForOne(el, text, delay=40) {
+    el.textContent = '';
+    let index = 0;
+    let hasStarted = false; 
     
+    let typeText = () => {
+        if (index < text.length) {
+            el.textContent += text[index];
+            index++;
+            setTimeout(typeText, delay);
+        }
+    }
     
+    let onScroll = () => {
+        if (!hasStarted && isElementInViewport(el)) {
+            hasStarted = true;
+            typeText();
+            window.removeEventListener('scroll', onScroll); 
+        }
+    }
     
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+}
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
 }

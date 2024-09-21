@@ -121,7 +121,7 @@
                         </a>
                     </li>
                     <li class="nav__social-element">
-                        <a href="https://t.me/OverLord2k4" class="nav__social-link" target="_blank">
+                        <a href="https://t.me/OverWebBlog" class="nav__social-link" target="_blank">
                             <img src="./images/icons/telegram.svg" alt="telegram">
                         </a>
                     </li>
@@ -138,7 +138,7 @@
                             Flutter &amp; Web Developer
                         </h1>
 
-                        <p class="header__descr" data-lang="intro_text">
+                        <p class="header__descr" data-tuping-text data-lang="intro_text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         </p>
 
@@ -184,26 +184,26 @@
                                 </h3>
                                 <ul class="about__info-list about__list">
                                     <li class="about__list-item">
-                                        <p data-lang="about_text1">
+                                        <p data-aos-offset="600" data-aos="zoom-in-right" data-lang="about_text1">
                                             Параграф 1
                                         </p>
                                     </li>
                                     <li class="about__list-item">
-                                        <p data-lang="about_text2">
+                                        <p data-aos-offset="600" data-aos="zoom-in-right" data-lang="about_text2">
                                             Параграф 2
                                         </p>
                                     </li>
                                     <li class="about__list-item">
-                                        <p data-lang="about_text3">
+                                        <p data-aos-offset="600"  data-aos="zoom-in-right" data-lang="about_text3">
                                             Параграф 3
                                         </p>
                                     </li>
                                 </ul>
                             </div>
                             <!-- <div class="about__images"> -->
-                            <div class="about__images">
-                                <img class="about__img" src="./images/about/about.png" alt="about vazgen programmer">
-                                <img class="about__img" src="./images/about/about_hover.png"
+                            <div data-aos-duration="1000" data-aos-offset="900"  data-aos="zoom-out" class="about__images">
+                                <img class="about__img" src="./images/about/photo2.png" alt="about vazgen programmer">
+                                <img class="about__img" src="./images/about/photo3.png"
                                     alt="about vazgen programmer">
                             </div>
                             <!-- </div> -->
@@ -219,7 +219,7 @@
                         <div class="studio__content">
                             <div class="studio__content-text">
                                 <h2 class="section__title">OverWeb</h2>
-                                <p class="studio__content-deskr" data-lang="overweb_description">
+                                <p data-tuping-text class="studio__content-deskr" data-lang="overweb_description">
                                     Веб студия, основная в начале 22го года.
                                 </p>
                             </div>
@@ -434,9 +434,11 @@
                             <h2 data-lang="contact" class="section__title footer__title">
                                 Связаться со мной
                             </h2>
-                            <form method="post" class="footer__form">
+                            <form action="https://zwa.toad.cz/~arutyvaz/OverWeb.cz/mail.php" method="post" class="footer__form">
+                                <input class="footer__form-input _disable" type="text" name="mail_form">
+                                <input class="footer__form-input _disable" type="text" name="lang">
                                 <input placeholder="Name" class="footer__form-input" type="text" name="name" required>
-                                <input placeholder="Email" class="footer__form-input" type="email" name="email"
+                                <input placeholder="Email" class="footer__form-input" type="email" name="mail_to"
                                     required>
                                 <textarea required placeholder="Message" class="footer__msg" name="msg"></textarea>
                                 <button href="#!" class="btn footer__form-btn">

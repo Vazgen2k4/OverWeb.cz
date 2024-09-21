@@ -1,11 +1,6 @@
 addEventListener('DOMContentLoaded', main);
 
-function main(document, event) {
-    
-    // setupSound();
-    
-    
-    
+async function main(document, event) {
     
     setupNavBar();
     setupPortfolio();
@@ -17,6 +12,6 @@ function main(document, event) {
         duration: 900, 
     });
     
-    setupLocalyzation();
-    
+    await setupLocalyzation();
+    setupTypingAnimation();
 }
