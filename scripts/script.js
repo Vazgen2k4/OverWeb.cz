@@ -1,4 +1,4 @@
-function setupPortfolio(params) {
+function setupPortfolio() {
     let portfolioGrid = document.querySelector('.portfolio__grid');
 
     portfolioList.forEach((itemData, index) => {
@@ -50,7 +50,7 @@ function setupPortfolio(params) {
     }
 };
 
-function setupButtons(params) {
+function setupButtons() {
     let allBtns = [...document.querySelectorAll('.btn')];
 
     allBtns.forEach((button, index) => {
@@ -73,7 +73,7 @@ function setupButtons(params) {
     });
 }
 
-function setupNavBar(params) {
+function setupNavBar() {
     let body = document.body;
     let menuBtn = document.querySelector('label.bars');
     let navBg = document.querySelector('.nav__content-bg');
@@ -92,7 +92,7 @@ function setupNavBar(params) {
     });
 }
 
-function setupSkills(params) {
+function setupSkills() {
     let skillsCards = [...document.querySelectorAll('.skills__grid-item.skills__item')];
 
     if (skillsCards.length > 0) {
@@ -136,7 +136,7 @@ function setupFooter() {
 
 }
 
-function setupSound(params) {
+function setupSound() {
     let soundBtn = document.querySelector('#sound__btn.sound__btn');
     let soundPlayer = document.querySelector('#sound');
 
@@ -157,7 +157,7 @@ function setupSound(params) {
 
 }
 
-async function setupLocalyzation(params) {
+async function setupLocalyzation() {
     let curetntLang = localStorage.getItem('lang') ?? html.getAttribute('lang') ?? 'en';
     let data = await readFile(`locales/${curetntLang}.json`);
     let localesList = [...document.querySelectorAll('[data-lang]')];
@@ -202,4 +202,11 @@ function switchLocale(lang) {
 
     localStorage.setItem('lang', lang);
     location.reload();
+}
+
+
+function setupTypingAnimation() {
+    
+    
+    
 }
