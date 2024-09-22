@@ -154,18 +154,18 @@ body::-webkit-scrollbar-thumb {
 
 #sound__btn.sound__btn {
     width: 60px;
-    transform: rotate(-150deg);
     padding: 5px;
     border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
+    transition: all .3s linear;
 }
 
 #sound__btn.sound__btn::after {
     content: '';
     display: block;
-    width: 75%;
+    width: 30px;
     height: 4px;
-    background: #B88CFF;
+    background: #ffffff;
     border-radius: 2px;
     position: absolute;
     transform: rotate(125deg);
@@ -174,6 +174,10 @@ body::-webkit-scrollbar-thumb {
 
 #sound__btn.sound__btn._active::after {
     background: transparent;
+}
+
+#sound__btn.sound__btn._active {
+    border-radius: 10px;
 }
 
 #sound__btn.sound__btn .sound__svg {
@@ -222,9 +226,6 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     left: 0;
     right: 0;
-
- 
-
     background: rgb(255, 255, 255);
 }
 

@@ -7,6 +7,7 @@ async function main(document, event) {
     setupSkills();
     setupFooter();
     setupButtons();
+    setupSound();
     
     AOS.init({
         duration: 900, 
@@ -14,4 +15,9 @@ async function main(document, event) {
     
     await setupLocalyzation();
     setupTypingAnimation();
+    
+    // Debug mode (mail refresh)
+    (()=>{
+       document.querySelector('.footer__form-input[name="mail_form"]').value = ''; 
+    })();
 }
