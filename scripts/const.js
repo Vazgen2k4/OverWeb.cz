@@ -1,30 +1,30 @@
 const portfolioList = [
   {
-    link: "#!www",
+    link: "https://vazgen2k4.github.io/Amind/",
     title: "Amind ",
     img_url: "images/portfolio/amid-card.png",
     description: "some descr 1"
   },
-  {
-    link: "#!www",
+  { 
+    link: "https://vazgen2k4.github.io/IndeVets/",
     title: "Pets",
     img_url: "images/portfolio/indevets-card.png",
     description: "some descr 2"
   },
   {
-    link: "#!www",
+    link: "https://vazgen2k4.github.io/OJJO/",
     title: "Online shop",
     img_url: "images/portfolio/ojjo-card.png",
     description: "some descr 3"
   },
   {
-    link: "#!www",
+    link: "https://vazgen2k4.github.io/OpenShop-by-Vazgen/",
     title: "Tehno store",
     img_url: "images/portfolio/openshop-card.png",
     description: "some descr 4"
   },
   {
-    link: "#!www",
+    link: "https://vazgen2k4.github.io/VueCinema/",
     title: "Vue Cinema Films",
     img_url: "images/portfolio/vuecinema-card.png",
     description: "some descr"

@@ -16,12 +16,12 @@ function setupPortfolio() {
         porrtfolioCard.innerHTML = `
             <div class="portfolio__card-content" >
                 <div class="portfolio__card-body">
-                    <a href="#!" class="portfolio__card-link">
+                    <a href="#!"  class="portfolio__card-link">
                         <img class="portfolio__card-img" src="${itemData.img_url}" alt="${itemData.title}">
                     </a>
                     <!--   <p class="portfolio__card-descr">${itemData.description}</p>  -->
                 </div>
-                <a href="${itemData.link}" class="btn">
+                <a target="_blank" href="${itemData.link}" class="btn">
                     <span data-lang="button_more" ></span>
                 </a>
             </div>
@@ -135,7 +135,7 @@ function setupFooter() {
         });
     });
 
-}
+} 
 
 function setupSound() {
     let soundBtn = document.querySelector('#sound__btn.sound__btn');
