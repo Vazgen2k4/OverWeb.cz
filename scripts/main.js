@@ -17,7 +17,7 @@ async function main(document, event) {
     setupTypingAnimation();
     
     // Debug mode (mail refresh)
-    (()=>{
-       document.querySelector('.footer__form-input[name="mail_form"]').value = ''; 
-    })();
+    // (()=>{
+    //    document.querySelector('.footer__form-input[name="mail_form"]').value = ''; 
+    // })();
 }
