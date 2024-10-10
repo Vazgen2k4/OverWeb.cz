@@ -516,6 +516,10 @@ section.section {
     padding-bottom: 100px;
 }
 
+.portfolio.section {
+    margin-top: 100px;
+}
+
 .portfolio__content {
     display: flex;
     flex-direction: column;
@@ -1048,7 +1052,9 @@ section.section {
         position: static;
         width: 320px;
         box-shadow: 0 0 10px black;
-        justify-content: space-around;
+        justify-content: flex-start;
+        gap: 50px;
+        /* padding-top: 50px; */
     }
 
     .bars {
